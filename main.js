@@ -1,16 +1,180 @@
 // Main body of the app.
 
+// Random number function
+/**
+ * Returns a random number between 0 and number - 1
+ * @param {int} number 
+ * 
+ * @return {int}
+ */
+function randomNumber(number) {
+    return Math.floor(Math.random() * number)
+}
+
 // Load the words to pick from
-const string1 = ['hairy', 'vile', 'ridiculous'];
-const string2 = ['banal', 'treachorous', 'infantile'];
-const string3 = ['ape', 'dog', 'buffoon'];
+// original source https://nosweatshakespeare.com/resources/shakespeare-insults/
+const string1 = [
+    'artless',
+    'bawdy',
+    'beslubbering',
+    'bootless',
+    'churlish',
+    'cockered',
+    'clouted',
+    'craven',
+    'currish',
+    'dankish',
+    'dissembling',
+    'droning',
+    'errant',
+    'fawning',
+    'fobbing',
+    'froward',
+    'frothy',
+    'gleeking',
+    'goatish',
+    'gorbellied',
+    'impertinent',
+    'infectious',
+    'jarring',
+    'loggerhead',
+    'lumpish',
+    'mammering',
+    'mangled',
+    'mewling',
+    'paunchy',
+    'pribbling',
+    'puking',
+    'puny',
+    'qualling',
+    'rank',
+    'reeky',
+    'roguish',
+    'ruttish',
+    'saucy',
+    'spleeny',
+    'spongy',
+    'surly',
+    'tottering',
+    'unmuzzled',
+    'vain',
+    'venomed',
+    'villainous',
+    'warped',
+    'wayward',
+    'weedy',
+    'yeasty'
+];
+const string2 = [
+    'base-court',
+    'bat-fowling',
+    'beef-witted',
+    'beetle-headed',
+    'boil-brained',
+    'clapper-clawed',
+    'clay-brained',
+    'common-kissing',
+    'crook-pated',
+    'dismal-dreaming',
+    'dizzy-eyed',
+    'doghearted',
+    'dread-bolted',
+    'earth-vexing',
+    'elf-skinned',
+    'fat-kidneyed',
+    'fen-sucked',
+    'flap-mouthed',
+    'fly-bitten',
+    'folly-fallen',
+    'fool-born',
+    'full-gorged',
+    'guts-griping',
+    'half-faced',
+    'hasty-witted',
+    'hedge-born',
+    'heli-hated',
+    'idle-headed',
+    'ill-breeding',
+    'ill-nurtured',
+    'knotty-pated',
+    'milk-livered',
+    'motley-minded',
+    'onion-eyed',
+    'plume-plucked',
+    'pottle-deep',
+    'pox-marked',
+    'reeling-ripe',
+    'rough-hewn',
+    'rude-growing',
+    'rump-fed',
+    'shard-borne',
+    'sheep-biting',
+    'spur-galled',
+    'swag-bellied',
+    'tardy-gaited',
+    'tickle-brained',
+    'toad-spotted',
+    'unchin-snouted',
+    'weather-bitten'
+];
+const string3 = [
+    'baggage',
+    'barnacle',
+    'bladder',
+    'boar-pig',
+    'bugbear',
+    'bum-bailey',
+    'canker-blossom',
+    'clack-dish',
+    'clotpole',
+    'coxcomb',
+    'codpiece',
+    'death-token',
+    'dewberry',
+    'flap-dragon',
+    'flax-wench',
+    'flirt-gill',
+    'foot-licker',
+    'fustilarian',
+    'giglet',
+    'gudgeon',
+    'haggard',
+    'harpy',
+    'hedge-pig',
+    'horn-beast',
+    'hugger-mugger',
+    'joithead',
+    'lewdster',
+    'lout',
+    'maggot-pie',
+    'malt-worm',
+    'mammet',
+    'measle',
+    'minnow',
+    'miscreant',
+    'moldwarp',
+    'mumble-news',
+    'nut-hook',
+    'pigeon-egg',
+    'pignut',
+    'puttock',
+    'pumpion',
+    'ratsbane',
+    'scut',
+    'skainsmate',
+    'strumpet',
+    'varlot',
+    'vassal',
+    'whey-face',
+    'wagtail'
+];
 
 // Choose the words
-const choice1 = string1[Math.floor(Math.random() * string1.length)];
-const choice2 = string2[Math.floor(Math.random() * string2.length)];
-const choice3 = string3[Math.floor(Math.random() * string3.length)];
+const choice1 = string1[randomNumber(string1.length)];
+const choice2 = string2[randomNumber(string2.length)];
+const choice3 = string3[randomNumber(string3.length)];
 
 
 // Combine choices into output
-let output = `Thou ${choice1} and ${choice2} ${choice3}!`;
+let output = `Thou ${choice1} ${choice2} ${choice3}!`;
 console.log(output);
